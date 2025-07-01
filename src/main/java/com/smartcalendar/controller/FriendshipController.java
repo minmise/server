@@ -43,7 +43,7 @@ public class FriendshipController {
         return ResponseEntity.status(HttpStatus.CREATED).body(subscription);
     }
 
-    @DeleteMapping("/unsubscribe/{followingId}")
+    @DeleteMapping("/unsubscribe/{user2Id}")
     public ResponseEntity<Void> unsubscribe(
             @AuthenticationPrincipal UserDetails userDetails,
             @PathVariable Long user2Id
